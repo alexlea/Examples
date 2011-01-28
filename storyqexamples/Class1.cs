@@ -39,6 +39,16 @@ namespace storyqexamples
                 .ExecuteWithReport(MethodBase.GetCurrentMethod());
         }
 
+        [Test]
+        public void scenario3()
+        {
+            _feature.WithScenario("Scenario 3")
+                .Given(Something)
+                .When(Something)
+                .Then(Something)
+                .ExecuteWithReport(MethodBase.GetCurrentMethod());
+        }
+
         private void Something()
         {
             throw new NotImplementedException();
