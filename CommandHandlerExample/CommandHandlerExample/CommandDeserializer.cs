@@ -5,7 +5,7 @@ namespace CommandHandlerExample
 {
     class CommandDeserializer : ICommandDeserializer
     {
-        public ICommand ParseCommand(string command)
+        public ICommand Deserialize(string command)
         {
             if (command.StartsWith("SendOutboundSMSCommand"))
             {

@@ -9,26 +9,22 @@
             _deserializer = deserializer;
         }
 
-        public void HandleCommand(string command)
+        public void HandleCommand(string commandString)
         {
             ICommand command;
             try
             {
-                command = _deserializer.ParseCommand(command);
-            }
+                command = _deserializer.Deserialize(commandString);
+                command.Execute();
+            }            
             catch (CommandDeserializationException cde)
             {
                 // log or queue error
             }
-
-            try
-            {
-                command.Execute();
-            }
             catch (CommandExecutionException cee)
             {
                 // log or queue error
-            }
+            }        
         }
     }
 }

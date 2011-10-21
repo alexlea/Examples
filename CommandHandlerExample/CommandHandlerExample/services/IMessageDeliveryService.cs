@@ -7,6 +7,8 @@ namespace CommandHandlerExample.services
 {
     class IMessageDeliveryService
     {
-        public void Send();
+        public void Send()
+        {
+        }
     }
 }

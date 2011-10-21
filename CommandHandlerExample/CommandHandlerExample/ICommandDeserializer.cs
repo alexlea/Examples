@@ -1,7 +1,7 @@
 ﻿namespace CommandHandlerExample
 {
-    interface ICommandDeserializer
+    public interface ICommandDeserializer
     {
-        ICommand ParseCommand(string command);
+        ICommand Deserialize(string command);
     }
 }
